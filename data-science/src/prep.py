@@ -8,6 +8,7 @@ import argparse
 from pathlib import Path
 import os
 import pandas as pd
+import logging
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import mlflow
@@ -79,6 +80,10 @@ def main(args):  # Write the function name for the main data preparation logic
 
 if __name__ == "__main__":
     mlflow.start_run()
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s"
+    )
 
     # Parse Arguments
     args = parse_args()  # Call the function to parse arguments
