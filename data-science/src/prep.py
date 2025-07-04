@@ -28,7 +28,7 @@ def main(args):  # Write the function name for the main data preparation logic
     '''Read, preprocess, split, and save datasets'''
 
     # Reading Data
-    df = pd.read_csv(args.used_cars_data)
+    df = pd.read_csv(args.raw_data)
 
     # ------- WRITE YOUR CODE HERE -------
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     args = parse_args()  # Call the function to parse arguments
 
     lines = [
-        f"Raw data path: {args.used_cars_data}",  # Print the used_cars_data path
+        f"Raw data path: {args.used_cars_data}",  # Print the raw_data path
         f"Train dataset output path: {args.train_data}",  # Print the train_data path
         f"Test dataset path: {args.test_data}",  # Print the test_data path
         f"Test-train ratio: {args.test_train_ratio}",  # Print the test_train_ratio
