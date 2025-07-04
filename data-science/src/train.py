@@ -4,6 +4,7 @@
 Trains ML model using training dataset and evaluates using test dataset. Saves trained model.
 """
 
+import os
 import argparse
 from pathlib import Path
 import pandas as pd
